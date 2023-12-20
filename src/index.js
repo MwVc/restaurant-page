@@ -1,3 +1,5 @@
 import { header } from "./modules/home";
 
-document.body.appendChild(header());
+const headerElement = header();
+
+document.body.appendChild(headerElement);
