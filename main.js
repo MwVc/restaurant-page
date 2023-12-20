@@ -1,1 +1,1 @@
-alert("A restaurant page is being built");
+(()=>{"use strict";const e=function(){const e=document.createElement("header"),t=document.createElement("h1");return t.textContent="MwVc",e.appendChild(t),e.appendChild(function(){const e=["HOME","MENU","CONTACTS"],t=document.createElement("nav"),n=document.createElement("div");n.classList.add("nav-container");const d=document.createElement("ul");for(let t=0;t<e.length;t++){let d=document.createElement("li");d.textContent=e[t],n.appendChild(d)}return d.appendChild(n),t.appendChild(n),t}()),e}();document.body.appendChild(e)})();
