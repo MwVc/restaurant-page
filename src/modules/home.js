@@ -31,7 +31,7 @@ const navigation = function () {
 
   for (let i = 0; i < navlist.length; i++) {
     let listItem = document.createElement("li");
-    listItem.textContent = navlist[i];
+    listItem.innerHTML = `<a href=#>${navlist[i]}</a>`;
     navContainer.appendChild(listItem);
   }
 
