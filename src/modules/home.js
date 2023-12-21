@@ -1,44 +1,47 @@
-// HEADER
-//  heading
-//  nav
-//    div
-//      ul
-//        li
-//        li
-//        li
+// nav
+//  div class "nav-wrapper"
+//    a class brand logo
+//      ul id nav-mobile class right hide on med and down
+//        li a
+//        li a
+//        li a
 
-const header = function () {
+const home = function () {
   //create html element
-  const headerElement = document.createElement("header");
-  const heading = document.createElement("h1");
+  const nav = document.createElement("nav");
+  const navWrapper = document.createElement("div");
 
-  heading.textContent = "MwVc";
-  headerElement.appendChild(heading);
-  headerElement.appendChild(navigation());
+  // Add class name of "nav-wrapper" to div
+  navWrapper.classList.add("nav-wrapper");
 
-  return headerElement;
+  const logo = document.createElement("a");
+  logo.classList.add("brand-logo");
+  logo.setAttribute("href", "#");
+  logo.textContent = "MwVc";
+
+  // appending elements
+  navWrapper.appendChild(logo);
+  navWrapper.appendChild(navigation());
+  nav.appendChild(navWrapper);
+
+  return nav;
 };
 
 const navigation = function () {
   const navlist = ["HOME", "MENU", "CONTACTS"];
 
-  const navElement = document.createElement("nav");
-
-  const navContainer = document.createElement("div");
-  navContainer.classList.add("nav-container");
-
   const ulElement = document.createElement("ul");
+  ulElement.classList.add("right");
+  ulElement.setAttribute("id", "nav-mobile");
 
+  // loop through navList array creating li element and appending to ulElement
   for (let i = 0; i < navlist.length; i++) {
     let listItem = document.createElement("li");
     listItem.innerHTML = `<a href=#>${navlist[i]}</a>`;
-    navContainer.appendChild(listItem);
+    ulElement.appendChild(listItem);
   }
 
-  ulElement.appendChild(navContainer);
-  navElement.appendChild(navContainer);
-
-  return navElement;
+  return ulElement;
 };
 
-export { header };
+export { home };
