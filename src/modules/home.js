@@ -13,14 +13,9 @@ const nav = function () {
   const container = document.createElement("div");
   const logo = document.createElement("a");
 
-  // Add attributes to elements
-  nav.classList.add("nav-wraper", "white");
-  container.classList.add("container");
-  logo.classList.add("brand-logo", "orange-text", "text-lighten-1");
-
   logo.setAttribute("href", "#");
 
-  logo.textContent = "RamRachem";
+  logo.textContent = "Soufi's";
 
   // appending elements
   container.appendChild(logo);
@@ -53,40 +48,6 @@ const desktopNavigation = function () {
   return ulElement;
 };
 
-// Mobile Navigation Menu
-const mobileNavigation = function () {
-  const ulElement = generateNavList();
-
-  // mobile menu elements
-  const menuBarIcon = document.createElement("a");
-  const iconElement = document.createElement("i");
-
-  menuBarIcon.classList.add("sidenav-trigger");
-  iconElement.classList.add("material-icons");
-
-  menuBarIcon.setAttribute("href", "#");
-  menuBarIcon.setAttribute("data-target", "mobile-links");
-
-  iconElement.textContent = "menu";
-
-  // add attributes
-  ulElement.classList.add("sidenav");
-  ulElement.setAttribute("id", "mobile-links");
-
-  return ulElement;
-};
-
 const section = function () {
-  const showcase = document.createElement("section");
-  const container = document.createElement("div");
-  const headerLogo = document.createElement("h1");
-
-  showcase.classList.add("showcase");
-  container.classList.add("container");
-
-  headerLogo.textContent = "RamRachem";
-
-  container.appendChild(headerLogo);
-  showcase.appendChild(container);
   return showcase;
 };
