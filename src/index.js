@@ -1,10 +1,9 @@
 import "./CSS/style.css";
 import "./CSS/materialize.min.css";
-
-import { navBar } from "./modules/home";
-
-const navSection = navBar();
+import home from "./modules/home.js";
 
 const content = document.querySelector(".content");
 
-content.appendChild(navSection);
+const homePage = home();
+
+content.appendChild(homePage);

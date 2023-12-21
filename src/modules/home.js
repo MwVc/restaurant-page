@@ -1,4 +1,13 @@
-const navBar = function () {
+export default function home() {
+  const home = document.createElement("div");
+  home.setAttribute("id", "home-container");
+  home.appendChild(nav());
+  home.appendChild(section());
+
+  return home;
+}
+
+const nav = function () {
   //create html element
   const nav = document.createElement("nav");
   const container = document.createElement("div");
@@ -67,4 +76,17 @@ const mobileNavigation = function () {
   return ulElement;
 };
 
-export { navBar };
+const section = function () {
+  const showcase = document.createElement("section");
+  const container = document.createElement("div");
+  const headerLogo = document.createElement("h1");
+
+  showcase.classList.add("showcase");
+  container.classList.add("container");
+
+  headerLogo.textContent = "RamRachem";
+
+  container.appendChild(headerLogo);
+  showcase.appendChild(container);
+  return showcase;
+};
