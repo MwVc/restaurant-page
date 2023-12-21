@@ -1,8 +1,7 @@
 import { home } from "./modules/home";
 
-const bodyContainer = document.createElement("div");
-bodyContainer.classList.add("container");
-const headerElement = home();
+const homePage = home();
 
-bodyContainer.appendChild(headerElement);
-document.body.appendChild(bodyContainer);
+const content = document.querySelector(".content");
+
+content.appendChild(homePage);
