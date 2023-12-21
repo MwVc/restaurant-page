@@ -1,13 +1,13 @@
-const home = function () {
+const navBar = function () {
   //create html element
   const nav = document.createElement("nav");
   const container = document.createElement("div");
   const logo = document.createElement("a");
 
   // Add attributes to elements
-  nav.classList.add("nav-wraper");
+  nav.classList.add("nav-wraper", "white");
   container.classList.add("container");
-  logo.classList.add("brand-logo");
+  logo.classList.add("brand-logo", "orange-text", "text-lighten-1");
 
   logo.setAttribute("href", "#");
 
@@ -29,7 +29,7 @@ const generateNavList = function () {
   // loop through navList array creating li element and appending to ulElement
   for (let i = 0; i < navListItems.length; i++) {
     let listItem = document.createElement("li");
-    listItem.innerHTML = `<a href=#>${navListItems[i]}</a>`;
+    listItem.innerHTML = `<a href=# class="black-text">${navListItems[i]}</a>`;
     navList.appendChild(listItem);
   }
 
@@ -67,4 +67,4 @@ const mobileNavigation = function () {
   return ulElement;
 };
 
-export { home };
+export { navBar };

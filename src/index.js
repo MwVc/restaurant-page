@@ -1,7 +1,10 @@
-import { home } from "./modules/home";
+import "./CSS/style.css";
+import "./CSS/materialize.min.css";
 
-const homePage = home();
+import { navBar } from "./modules/home";
+
+const navSection = navBar();
 
 const content = document.querySelector(".content");
 
-content.appendChild(homePage);
+content.appendChild(navSection);
