@@ -4,11 +4,13 @@ export default function home() {
   const showcaseSection = generateShowcase();
   const nameSection = generateNameSection();
   const aboutSection = generateAboutSection();
+  const parallaxSection = generateParallaxSection();
   const footer = generateFooter();
 
   homePage.appendChild(nav);
   homePage.appendChild(showcaseSection);
   homePage.appendChild(nameSection);
+  homePage.appendChild(parallaxSection);
   homePage.appendChild(aboutSection);
   homePage.appendChild(footer);
 
@@ -58,7 +60,7 @@ const generateShowcase = function () {
   const iconContainer = document.createElement("div");
 
   catchPhrase.classList.add("catch-phrase");
-  showcaseSection.classList.add("showcase");
+  showcaseSection.classList.add("showcase", "parallax-effect");
   showcasecontainer.classList.add("showcase-container");
   iconContainer.classList.add("icon-container");
 
@@ -129,6 +131,14 @@ const generateFooter = function () {
   footer.appendChild(container);
 
   return footer;
+};
+
+const generateParallaxSection = function () {
+  const parallaxSection = document.createElement("section");
+
+  parallaxSection.classList.add("parallax-section", "parallax-effect");
+
+  return parallaxSection;
 };
 
 //  Desktop Navigation Menu

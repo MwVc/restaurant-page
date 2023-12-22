@@ -141,6 +141,14 @@ nav .container .menu-items li a:hover {
   text-align: justify;
 }
 
+.parallax-section {
+  height: 300px;
+  background: url(/src/img/may-lawrence-IBQturWlSgU-unsplash.jpg) center/cover
+    fixed;
+  overflow: hidden;
+  position: relative;
+}
+
 footer {
   background: #2cdf03;
   height: 6rem;
