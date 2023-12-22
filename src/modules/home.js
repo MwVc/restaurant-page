@@ -2,9 +2,11 @@ export default function home() {
   const homePage = document.createElement("div");
   const nav = generateNav();
   const showcaseSection = generateShowcase();
+  const nameSection = generateNameSection();
 
   homePage.appendChild(nav);
   homePage.appendChild(showcaseSection);
+  homePage.appendChild(nameSection);
 
   return homePage;
 }
@@ -65,6 +67,25 @@ const generateShowcase = function () {
   showcaseSection.appendChild(showcasecontainer);
 
   return showcaseSection;
+};
+
+const generateNameSection = function () {
+  const nameSection = document.createElement("section");
+  const container = document.createElement("div");
+  const restaurantName = document.createElement("p");
+  const description = document.createElement("h1");
+
+  nameSection.classList.add("name-section");
+  container.classList.add("container");
+
+  restaurantName.textContent = "Soufi's Restaurant and Cafe";
+  description.textContent = "PINEAPPLE MTSUNGA, SIMA YA BADA & MORE...";
+
+  container.appendChild(restaurantName);
+  container.appendChild(description);
+  nameSection.appendChild(container);
+
+  return nameSection;
 };
 
 //  Desktop Navigation Menu

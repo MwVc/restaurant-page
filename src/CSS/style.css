@@ -17,8 +17,10 @@ body {
 }
 
 nav {
-  z-index: 1;
-  box-shadow: 0px 5px 10px 0px #aaa;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 5px 10px 0px #ffffff75;
+  background: #fff;
 }
 
 nav .container {
@@ -51,10 +53,16 @@ nav .container .menu-items li {
 nav .container .menu-items li a {
   text-decoration: none;
   font-weight: 500;
+  color: #444;
+}
+
+nav .container .menu-items li a:hover {
+  color: #2cdf03;
 }
 
 .showcase {
-  background: url(/src/img/chad-montano-MqT0asuoIcU-unsplash.jpg) no-repeat;
+  background: linear-gradient(rgba(97, 255, 131, 0.205), rgba(2, 66, 8, 0.623)),
+    url(/src/img/chad-montano-MqT0asuoIcU-unsplash.jpg) no-repeat;
   min-height: 450px;
   background-size: cover;
 
@@ -78,7 +86,30 @@ nav .container .menu-items li a {
 }
 
 .showcase .showcase-container h4 {
-  color: #2eaf11;
+  color: #2cdf03;
   font-weight: bolder;
   font-size: 2rem;
+}
+
+.name-section .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.name-section .container p {
+  font-size: 2rem;
+  color: #2cdf03;
+  padding: 0.5rem;
+}
+
+.name-section .container h1 {
+  font-size: 2rem;
+  color: #2cdf03;
+  font-weight: bold;
+  padding: 0.5rem;
 }
