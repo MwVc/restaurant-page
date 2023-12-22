@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
     contentContainer.appendChild(page());
   }
 
-  switchPage(home);
-
   const homePage = document.getElementById("home-page");
   const menuPage = document.getElementById("menu-page");
   const contactPage = document.getElementById("contact-page");
 
-  homePage.addEventListener("click", switchPage(home));
-  menuPage.addEventListener("click", switchPage(menu));
-  contactPage.addEventListener("click", switchPage(contact));
+  contactPage.addEventListener("click", () => switchPage(contact));
+  homePage.addEventListener("click", () => switchPage(home));
+  menuPage.addEventListener("click", () => switchPage(menu));
+
+  switchPage(home);
 });
 
 // parallax effect function
