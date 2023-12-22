@@ -38,14 +38,16 @@ const generateNav = function () {
 };
 
 const generateMenuItems = function () {
-  const navListItems = ["HOME", "MENU", "CONTACTS"];
+  const navListItems = ["HOME", "MENU", "CONTACT"];
 
   const menuItems = document.createElement("ul");
 
   // loop through navList array creating li element and appending to ulElement
   for (let i = 0; i < navListItems.length; i++) {
     let listItem = document.createElement("li");
-    listItem.innerHTML = `<a href=#>${navListItems[i]}</a>`;
+    listItem.innerHTML = `<a href=# id="${navListItems[
+      i
+    ].toLowerCase()}-page">${navListItems[i]}</a>`;
     menuItems.appendChild(listItem);
   }
 
@@ -140,8 +142,3 @@ const generateParallaxSection = function () {
 
   return parallaxSection;
 };
-
-//  Desktop Navigation Menu
-const desktopNavigation = function () {};
-
-const section = function () {};
