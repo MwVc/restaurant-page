@@ -1,28 +1,9 @@
 export default function home() {
-  const home = document.createElement("div");
-  home.setAttribute("id", "home-container");
-  home.appendChild(nav());
-  home.appendChild(section());
-
   return home;
 }
 
 const nav = function () {
-  //create html element
-  const nav = document.createElement("nav");
-  const container = document.createElement("div");
-  const logo = document.createElement("a");
-
-  logo.setAttribute("href", "#");
-
-  logo.textContent = "Soufi's";
-
-  // appending elements
-  container.appendChild(logo);
-  container.appendChild(desktopNavigation());
-  nav.appendChild(container);
-
-  return nav;
+  const navigationBar = document.createElement("nav");
 };
 
 const generateNavList = function () {
@@ -41,13 +22,6 @@ const generateNavList = function () {
 };
 
 //  Desktop Navigation Menu
-const desktopNavigation = function () {
-  const ulElement = generateNavList();
-  ulElement.classList.add("right", "hide-on-med-and-down");
+const desktopNavigation = function () {};
 
-  return ulElement;
-};
-
-const section = function () {
-  return showcase;
-};
+const section = function () {};

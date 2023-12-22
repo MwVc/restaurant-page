@@ -1,4 +1,3 @@
-import "./CSS/materialize.min.css";
 import "./CSS/style.css";
 
 import home from "./modules/home.js";
