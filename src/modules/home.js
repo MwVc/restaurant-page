@@ -3,10 +3,14 @@ export default function home() {
   const nav = generateNav();
   const showcaseSection = generateShowcase();
   const nameSection = generateNameSection();
+  const aboutSection = generateAboutSection();
+  const footer = generateFooter();
 
   homePage.appendChild(nav);
   homePage.appendChild(showcaseSection);
   homePage.appendChild(nameSection);
+  homePage.appendChild(aboutSection);
+  homePage.appendChild(footer);
 
   return homePage;
 }
@@ -86,6 +90,45 @@ const generateNameSection = function () {
   nameSection.appendChild(container);
 
   return nameSection;
+};
+
+const generateAboutSection = function () {
+  const aboutSection = document.createElement("section");
+  const container = document.createElement("div");
+  const heading = document.createElement("h2");
+  const paragraphOne = document.createElement("p");
+  const paragraphTwo = document.createElement("p");
+
+  aboutSection.classList.add("about-section");
+  container.classList.add("container");
+
+  heading.innerText = "About Us";
+  paragraphOne.innerText =
+    "Welcome to Soufi's, where passion meets flavor. Our culinary journey began in 1900, and since then, we have been dedicated to providing an exceptional dining experience for our guests.";
+  paragraphTwo.innerText =
+    "At Soufi's, we take pride in sourcing the finest ingredients to create mouthwatering dishes that satisfy your cravings. Our menu is a celebration of chidigo cuisine, blending tradition with innovation to deliver unforgettable flavors";
+
+  container.appendChild(heading);
+  container.appendChild(paragraphOne);
+  container.appendChild(paragraphTwo);
+  aboutSection.appendChild(container);
+
+  return aboutSection;
+};
+
+const generateFooter = function () {
+  const footer = document.createElement("footer");
+  const container = document.createElement("div");
+  const footerContent = document.createElement("p");
+
+  container.classList.add("container");
+
+  footerContent.innerHTML = "&copy; 2023 All rights reserved";
+
+  container.appendChild(footerContent);
+  footer.appendChild(container);
+
+  return footer;
 };
 
 //  Desktop Navigation Menu
