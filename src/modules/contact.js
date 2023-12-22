@@ -1,14 +1,14 @@
 import { generateMenuItems } from "./home";
 
-export default function menu() {
-  const menuPage = document.createElement("div");
+export default function contact() {
+  const contactPage = document.createElement("div");
   const nav = generateNav();
   const footer = generateFooter();
 
-  menuPage.appendChild(nav);
-  menuPage.appendChild(footer);
+  contactPage.appendChild(nav);
+  contactPage.appendChild(footer);
 
-  return menuPage;
+  return contactPage;
 }
 
 const generateNav = function () {

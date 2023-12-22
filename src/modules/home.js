@@ -37,7 +37,7 @@ const generateNav = function () {
   return navigationBar;
 };
 
-const generateMenuItems = function () {
+export const generateMenuItems = function () {
   const navListItems = ["HOME", "MENU", "CONTACT"];
 
   const menuItems = document.createElement("ul");
