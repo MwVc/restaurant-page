@@ -1,7 +1,10 @@
 export default function home() {
   const homePage = document.createElement("div");
   const nav = generateNav();
+  const showcaseSection = generateShowcase();
+
   homePage.appendChild(nav);
+  homePage.appendChild(showcaseSection);
 
   return homePage;
 }
@@ -39,6 +42,29 @@ const generateMenuItems = function () {
   }
 
   return menuItems;
+};
+
+const generateShowcase = function () {
+  const showcaseSection = document.createElement("section");
+  const showcasecontainer = document.createElement("div");
+  const showcaseLogo = document.createElement("h1");
+  const catchPhrase = document.createElement("h4");
+  const iconContainer = document.createElement("div");
+
+  catchPhrase.classList.add("catch-phrase");
+  showcaseSection.classList.add("showcase");
+  showcasecontainer.classList.add("showcase-container");
+  iconContainer.classList.add("icon-container");
+
+  catchPhrase.textContent = "Savor the Flavor, Taste the Difference!";
+  showcaseLogo.textContent = "Soufi's";
+
+  showcasecontainer.appendChild(showcaseLogo);
+  showcasecontainer.appendChild(iconContainer);
+  showcasecontainer.appendChild(catchPhrase);
+  showcaseSection.appendChild(showcasecontainer);
+
+  return showcaseSection;
 };
 
 //  Desktop Navigation Menu

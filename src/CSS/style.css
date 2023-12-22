@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-  z-index: 10;
+  z-index: 1;
   box-shadow: 0px 5px 10px 0px #aaa;
 }
 
@@ -31,7 +31,7 @@ nav .container {
 }
 
 nav .container h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", sans-serif;
   font-size: 2.3rem;
   font-weight: bolder;
 }
@@ -51,4 +51,34 @@ nav .container .menu-items li {
 nav .container .menu-items li a {
   text-decoration: none;
   font-weight: 500;
+}
+
+.showcase {
+  background: url(/src/img/chad-montano-MqT0asuoIcU-unsplash.jpg) no-repeat;
+  min-height: 450px;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase .showcase-container h1 {
+  font-family: "Dancing Script", sans-serif;
+  font-weight: 900;
+  font-size: 15rem;
+  color: #fff;
+}
+
+.showcase .showcase-container h4 {
+  color: #2eaf11;
+  font-weight: bolder;
+  font-size: 2rem;
 }
