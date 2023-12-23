@@ -1,4 +1,4 @@
-export default function home() {
+export function home() {
   const homePage = document.createElement("div");
   const nav = generateNav();
   const showcaseSection = generateShowcase();
@@ -15,6 +15,10 @@ export default function home() {
   homePage.appendChild(footer);
 
   return homePage;
+}
+
+export default function loadHome() {
+  const contentContainer = document.querySelector(".content");
 }
 
 const generateNav = function () {
