@@ -1,6 +1,15 @@
 import { generateMenuItems } from "./home";
 
-export default function menu() {
+export default function loadMenu() {
+  const contentContainer = document.querySelector(".content");
+  contentContainer.innerHTML = "";
+
+  const menuPage = menu();
+
+  contentContainer.appendChild(menuPage);
+}
+
+function menu() {
   const menuPage = document.createElement("div");
   const nav = generateNav();
   const footer = generateFooter();

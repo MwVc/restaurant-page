@@ -1,4 +1,13 @@
-export function home() {
+export default function loadHome() {
+  const contentContainer = document.querySelector(".content");
+  contentContainer.innerHTML = "";
+
+  const homePage = home();
+
+  contentContainer.appendChild(homePage);
+}
+
+function home() {
   const homePage = document.createElement("div");
   const nav = generateNav();
   const showcaseSection = generateShowcase();
@@ -15,10 +24,6 @@ export function home() {
   homePage.appendChild(footer);
 
   return homePage;
-}
-
-export default function loadHome() {
-  const contentContainer = document.querySelector(".content");
 }
 
 const generateNav = function () {
