@@ -11,6 +11,7 @@ export default function loadMenu() {
 
 function menu() {
   const menuPage = document.createElement("div");
+  menuPage.classList.add("menu-page");
   const nav = generateNav();
   const cardsSection = menuCards();
   const footer = generateFooter();
@@ -50,31 +51,31 @@ const menuCards = function () {
       name: "Jollof Rice",
       description:
         "A popular West African dish made with rice, tomatoes, onions, and a blend of spices, often served with grilled or fried chicken, fish, or other protein.",
-      image: "../img/jollof.jpg",
+      image: "/src/img/jollof.jpg",
     },
     {
       name: "Bobotie",
       description:
         "A South African dish consisting of spiced minced meat baked with an egg-based topping, typically served with yellow rice and chutney.",
-      image: "../img/Bobotie.jpeg",
+      image: "/src/img/Bobotie.jpeg",
     },
     {
       name: "Injera",
       description:
         "A sourdough flatbread that is a staple in Ethiopian and Eritrean cuisine, usually served with a variety of stews and dishes.",
-      image: "../img/Injera.jpg",
+      image: "/src/img/Injera.jpg",
     },
     {
       name: "Suya",
       description:
         "A popular Nigerian street food, suya is skewered and grilled spicy meat (often beef or chicken) served with sliced onions, tomatoes, and pepper sauce.",
-      image: "../img/suya.jpeg",
+      image: "/src/img/suya.jpeg",
     },
     {
       name: "Bunny Chow",
       description:
         "Originating from South Africa, Bunny Chow is a fast food dish consisting of a hollowed-out loaf of bread filled with curry, typically chicken or mutton curry.",
-      image: "../image/bunny_chow.jpg",
+      image: "/src/image/bunny_chow.jpg",
     },
     {
       name: "Dibi",
@@ -86,14 +87,17 @@ const menuCards = function () {
   ];
 
   for (let i = 0; i < menuArray.length; i++) {
+    // Card creation and properties
     const card = document.createElement("div");
-    const img = document.createElement("img");
-    img.setAttribute("src", `${menuArray[i].image}`);
-    img.setAttribute("alt", "Avatar");
-    img.setAttribute("style", "width: 100%");
+    card.classList.add("card");
+    card.setAttribute("onclick", "showFullScreenImage()");
 
-    const container = document.createElement("div");
-    container.classList.add("container");
+    // Image creation and properties
+    const image = document.createElement("img");
+    image.setAttribute("src", `${menuArray[i].image}`);
+    image.setAttribute("alt", "Fullscreen Image");
+    image.setAttribute("id", "fullscreenImage");
+    image.classList.add("fullscreen-image");
 
     const heading = document.createElement("h4");
     const description = document.createElement("p");
@@ -101,12 +105,14 @@ const menuCards = function () {
     heading.textContent = menuArray[i].name;
     description.textContent = menuArray[i].description;
 
-    card.appendChild(img);
-    card.appendChild(container);
-    container.appendChild(heading);
-    container.appendChild(description);
+    card.appendChild(heading);
+    card.appendChild(description);
+    card.appendChild(image);
     cardsContainer.appendChild(card);
   }
+
+  cardsContainer.classList.add("cards-container");
+  section.classList.add("parallax-effect");
 
   section.appendChild(cardsContainer);
 
