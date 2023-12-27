@@ -2,21 +2,9 @@ import "./CSS/style.css";
 import loadHome from "./modules/home.js";
 import loadMenu from "./modules/menu.js";
 
-init();
+const contentContainer = document.querySelector(".content");
 
-function createEventListner() {
-  const homeBtn = document.getElementById("home-page");
-  const menuBtn = document.getElementById("menu-page");
-
-  homeBtn.addEventListener("click", loadHome);
-  menuBtn.addEventListener("click", loadMenu);
-}
-
-function init() {
-  loadMenu();
-  loadHome();
-  createEventListner();
-}
+contentContainer.appendChild(loadMenu());
 
 // parallax effect function
 document.addEventListener("scroll", function () {
