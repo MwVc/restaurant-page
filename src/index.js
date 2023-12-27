@@ -1,10 +1,10 @@
 import "./CSS/style.css";
 import loadHome from "./modules/home.js";
-import loadMenu from "./modules/menu.js";
+// import loadMenu from "./modules/menu.js";
 
 const contentContainer = document.querySelector(".content");
 
-contentContainer.appendChild(loadMenu());
+contentContainer.appendChild(loadHome());
 
 // parallax effect function
 document.addEventListener("scroll", function () {

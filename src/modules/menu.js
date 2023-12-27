@@ -1,4 +1,3 @@
-import { container } from "webpack";
 import { generateMenuItems } from "./home";
 
 export default function loadMenu() {
@@ -13,9 +12,11 @@ export default function loadMenu() {
 function menu() {
   const menuPage = document.createElement("div");
   const nav = generateNav();
+  const cardsSection = menuCards();
   const footer = generateFooter();
 
   menuPage.appendChild(nav);
+  menuPage.appendChild(cardsSection);
   menuPage.appendChild(footer);
 
   return menuPage;
@@ -84,33 +85,28 @@ const menuCards = function () {
     },
   ];
 
-  function cards() {
-    for (let i = 0; i < menuArray.length; i++) {
-      const card = document.createElement("div");
-      const img = document.createElement("img");
-      img.setAttribute("src", `${menuArray[i].image}`);
-      img.setAttribute("alt", "Avatar");
-      img.setAttribute("style", "width: 100%");
+  for (let i = 0; i < menuArray.length; i++) {
+    const card = document.createElement("div");
+    const img = document.createElement("img");
+    img.setAttribute("src", `${menuArray[i].image}`);
+    img.setAttribute("alt", "Avatar");
+    img.setAttribute("style", "width: 100%");
 
-      const container = document.createElement("div");
-      container.classList.add("container");
+    const container = document.createElement("div");
+    container.classList.add("container");
 
-      const heading = document.createElement("h4");
-      const description = document.createElement("p");
+    const heading = document.createElement("h4");
+    const description = document.createElement("p");
 
-      heading.textContent = menuArray[i].name;
-      description.textContent = menuArray[i].description;
+    heading.textContent = menuArray[i].name;
+    description.textContent = menuArray[i].description;
 
-      card.appendChild(img);
-      card.appendChild(container);
-      container.appendChild(heading);
-      container.appendChild(description);
-
-      return card;
-    }
+    card.appendChild(img);
+    card.appendChild(container);
+    container.appendChild(heading);
+    container.appendChild(description);
+    cardsContainer.appendChild(card);
   }
-
-  const card = cardsContainer.classList.add("cards-container");
 
   section.appendChild(cardsContainer);
 

@@ -71,7 +71,7 @@ const generateShowcase = function () {
   const iconContainer = document.createElement("div");
 
   catchPhrase.classList.add("catch-phrase");
-  showcaseSection.classList.add("showcase", "parallax-effect");
+  showcaseSection.classList.add("showcase");
   showcasecontainer.classList.add("showcase-container");
   iconContainer.classList.add("icon-container");
 
