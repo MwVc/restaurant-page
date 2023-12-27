@@ -161,7 +161,7 @@ nav .container .menu-items li a:hover {
   height: 100%;
 }
 
-section {
+.menu-section {
   height: 100%;
 
   background: linear-gradient(rgba(97, 255, 131, 0.205), rgba(2, 66, 8, 0.623)),
@@ -171,7 +171,7 @@ section {
   padding: 1rem;
 }
 
-section .cards-container {
+.menu-section .cards-container {
   width: 80%;
   height: 90%;
   margin: auto auto;
@@ -181,7 +181,7 @@ section .cards-container {
   gap: 2rem;
 }
 
-section .cards-container .card {
+.menu-section .cards-container .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
@@ -197,20 +197,20 @@ section .cards-container .card {
   cursor: pointer;
 }
 
-section .cards-container .card h4 {
+.menu-section .cards-container .card h4 {
   color: #2cdf03;
   font-size: 2rem;
   font-weight: bold;
   padding: 2rem;
 }
 
-section .cards-container .card p {
+.menu-section .cards-container .card p {
   color: #444;
   font-size: 1.2rem;
   text-align: left;
 }
 
-section .cards-container .card img {
+.menu-section .cards-container .card img {
   display: none;
   position: fixed;
   top: 0;
@@ -226,7 +226,7 @@ section .cards-container .card img {
   ); /* Add a semi-transparent overlay for better visibility */
 }
 
-section .cards-container .card:hover {
+.menu-section .cards-container .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 

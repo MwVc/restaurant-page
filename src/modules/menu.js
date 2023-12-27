@@ -45,6 +45,7 @@ const generateNav = function () {
 
 const menuCards = function () {
   const section = document.createElement("section");
+  section.classList.add("menu-section");
   const cardsContainer = document.createElement("div");
   const menuArray = [
     {

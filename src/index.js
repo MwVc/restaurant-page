@@ -2,8 +2,6 @@ import "./CSS/style.css";
 import loadHome from "./modules/home.js";
 import loadMenu from "./modules/menu.js";
 
-const contentContainer = document.querySelector(".content");
-
 const generateNav = function () {
   const navigationBar = document.createElement("nav");
   const container = document.createElement("div");
@@ -39,7 +37,14 @@ const generateMenuItems = function () {
   return menuItems;
 };
 
-contentContainer.appendChild(generateNav());
+function init() {
+  const contentContainer = document.querySelector(".content");
+  contentContainer.appendChild(generateNav());
+  contentContainer.appendChild(loadHome());
+
+  return { contentContainer };
+}
+
 // parallax effect function
 document.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
