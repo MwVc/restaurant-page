@@ -11,6 +11,8 @@ const contact = function () {
   const contactPage = document.createElement("div");
   const footer = generateFooter();
 
+  contactPage.classList.add("contact-page");
+
   contactPage.appendChild(footer);
 
   return contactPage;

@@ -30,6 +30,7 @@ const initializePage = function () {
 
   contactBtn.addEventListener("click", function () {
     contentContainer.textContent = "";
+    contentContainer.appendChild(loadContact());
   });
 };
 

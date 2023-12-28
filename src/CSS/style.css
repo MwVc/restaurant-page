@@ -231,12 +231,18 @@ nav .container .buttons button:hover {
   ); /* Add a semi-transparent overlay for better visibility */
 }
 
+/* Contact Page Styles */
+.contact-page {
+  height: 100%;
+}
+
 footer {
   background: #2cdf03;
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 0;
 }
 
 footer .container {
