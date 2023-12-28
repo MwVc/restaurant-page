@@ -1,17 +1,8 @@
-export default function loadMenu() {
-  const contentContainer = document.querySelector(".content");
-
-  const menuPage = menu();
-
-  contentContainer.appendChild(menuPage);
-}
-
-function menu() {
+export default function menu() {
   const menuPage = document.createElement("div");
   menuPage.classList.add("menu-page");
   const cardsSection = menuCards();
   const footer = generateFooter();
-
   menuPage.appendChild(cardsSection);
   menuPage.appendChild(footer);
 
@@ -66,14 +57,6 @@ const menuCards = function () {
     // Card creation and properties
     const card = document.createElement("div");
     card.classList.add("card");
-    card.setAttribute("onclick", "showFullScreenImage()");
-
-    // Image creation and properties
-    const image = document.createElement("img");
-    image.setAttribute("src", `${menuArray[i].image}`);
-    image.setAttribute("alt", "Fullscreen Image");
-    image.setAttribute("id", "fullscreenImage");
-    image.classList.add("fullscreen-image");
 
     const heading = document.createElement("h4");
     const description = document.createElement("p");
@@ -83,12 +66,10 @@ const menuCards = function () {
 
     card.appendChild(heading);
     card.appendChild(description);
-    card.appendChild(image);
     cardsContainer.appendChild(card);
   }
 
   cardsContainer.classList.add("cards-container");
-  section.classList.add("parallax-effect");
 
   section.appendChild(cardsContainer);
 

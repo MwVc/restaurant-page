@@ -1,6 +1,7 @@
 import "./CSS/style.css";
 import loadHome from "./modules/home.js";
-import loadMenu from "./modules/menu.js";
+import menu from "./modules/menu.js";
+import loadContact from "./modules/contact.js";
 import generateNav from "./modules/navigationBar.js";
 
 const initializePage = function () {
@@ -18,13 +19,17 @@ const initializePage = function () {
   console.log(contactBtn);
 
   homeBtn.addEventListener("click", function () {
-    contentContainer.innerHTML = "";
+    contentContainer.textContent = "";
     contentContainer.appendChild(loadHome());
   });
 
   menuBtn.addEventListener("click", function () {
     contentContainer.textContent = "";
-    loadMenu();
+    contentContainer.appendChild(menu());
+  });
+
+  contactBtn.addEventListener("click", function () {
+    contentContainer.textContent = "";
   });
 };
 
@@ -36,13 +41,3 @@ document.addEventListener("scroll", function () {
   const parallaxElement = document.querySelector(".parallax-effect");
   parallaxElement.style.backgroundPositionY = scrollPosition * 0.05 + "px";
 });
-
-// Show fullScreenImage
-function showFullScreenImage() {
-  // Get the full-screen image element
-  const fullscreenImage = document.getElementById("fullscreenImage");
-  // Toggle the display of the full-screen image
-  fullscreenImage.style.display === "none"
-    ? (fullscreenImage.style.display = "block")
-    : (fullscreenImage.style.display = "none");
-}
