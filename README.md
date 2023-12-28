@@ -1,6 +1,6 @@
 # Restaurant Page
 
-This is a restaurant page project developed to practice ES6 modules, Webpack, and SCSS, creating a dynamic and engaging web experience.
+This is a restaurant page project developed to practice ES6 modules, Webpack, and CSS, creating a dynamic and engaging web experience.
 
 ## Technologies Used
 
