@@ -44,25 +44,23 @@ nav .container h1 {
   font-weight: bolder;
 }
 
-nav .container .menu-items {
+nav .container .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 16rem;
 }
 
-nav .container .menu-items li {
+nav .container .buttons button {
   font-size: 1.2rem;
   list-style: none;
-}
-
-nav .container .menu-items li a {
-  text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  border: none;
+  background: #fff;
   color: #444;
 }
 
-nav .container .menu-items li a:hover {
+nav .container .buttons button:hover {
   color: #2cdf03;
 }
 
@@ -197,6 +195,13 @@ nav .container .menu-items li a:hover {
   cursor: pointer;
 }
 
+.menu-section .cards-container .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  scale: 1.5;
+  z-index: 1000;
+  background: #fff;
+}
+
 .menu-section .cards-container .card h4 {
   color: #2cdf03;
   font-size: 2rem;
@@ -224,10 +229,6 @@ nav .container .menu-items li a:hover {
     0,
     0.8
   ); /* Add a semi-transparent overlay for better visibility */
-}
-
-.menu-section .cards-container .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer {

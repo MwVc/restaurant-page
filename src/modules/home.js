@@ -1,10 +1,11 @@
 export default function loadHome() {
-  const contentContainer = document.querySelector(".content");
-  contentContainer.innerHTML = "";
+  // const contentContainer = document.querySelector(".content");
 
   const homePage = home();
 
-  contentContainer.appendChild(homePage);
+  // contentContainer.appendChild(homePage);
+
+  return homePage;
 }
 
 function home() {
